@@ -18,12 +18,11 @@ class GenerateExpression():
                 while y.numerator == 0:
                     y = self.get_num(max_value)
             self.nums.append(y)
-        if len(self.nums) >= 5: #当有括号时，不因括号产生多余的数
+        if len(self.nums) >= 5: # 当有括号时，不因括号产生多余的数
             del self.nums[-2:]
 
 
-    def get_operator(self):
-        '''随机生成一个运算符并随机插入括号'''
+    def get_operator(self):  # 随机生成一个运算符并随机插入括号
         self.operators = []
         operator = ['+', '-', '×', '÷']
         for x in range(3):
